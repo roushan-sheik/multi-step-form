@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { personalInfoSchema } from "../schema/formSchema";
-import { z } from "zod";
 import { TPersonalInfo } from "../types/formTypes";
 
 type Props = {
