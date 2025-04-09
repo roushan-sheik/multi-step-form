@@ -1,5 +1,5 @@
 "use client";
-
+import { ToastContainer, toast } from "react-toastify";
 import { TFormData } from "../types/formTypes";
 
 type Props = {
@@ -10,13 +10,15 @@ type Props = {
 const StepSummary = ({ prev, data }: Props) => {
   const handleSubmit = () => {
     console.log("Submitted Data:", data);
-    alert("Form submitted successfully!");
+    toast("Form submitted successfully!");
+    // alert("Form submitted successfully!");
   };
 
   return (
     <div className="space-y-4">
       <h2 className="text-xl font-bold">Review Your Information</h2>
 
+      <ToastContainer />
       <div className="grid gap-2">
         <p>
           <strong>Full Name:</strong> {data.fullName}

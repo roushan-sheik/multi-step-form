@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { personalInfoSchema } from "../schema/formSchema";
 import { TPersonalInfo } from "../types/formTypes";
+import ButtonNext from "@/container/ui/ButtonNext";
 
 type Props = {
   next: () => void;
@@ -48,9 +49,7 @@ const StepOne = ({ next, update, defaultValues }: Props) => {
         )}
       </div>
 
-      <button type="submit" className="btn-primary">
-        Next
-      </button>
+      <ButtonNext type="submit">Next</ButtonNext>
     </form>
   );
 };

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addressDetailsSchema } from "../schema/formSchema";
 import { TAddressDetails } from "../types/formTypes";
+import ButtonNext from "@/container/ui/ButtonNext";
 
 type Props = {
   next: () => void;
@@ -55,9 +56,7 @@ const StepTwo = ({ next, prev, update, defaultValues }: Props) => {
         <button type="button" onClick={prev} className="btn-secondary">
           Previous
         </button>
-        <button type="submit" className="btn-primary">
-          Next
-        </button>
+        <ButtonNext type="submit">Next</ButtonNext>
       </div>
     </form>
   );
