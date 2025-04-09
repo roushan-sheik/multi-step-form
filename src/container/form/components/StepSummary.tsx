@@ -11,7 +11,7 @@ type Props = {
 const StepSummary = ({ prev, data }: Props) => {
   const handleSubmit = () => {
     console.log("Submitted Data:", data);
-    toast("Form submitted successfully!");
+    toast("Form submitted successfully!", { position: "top-center" });
     // alert("Form submitted successfully!");
   };
 
