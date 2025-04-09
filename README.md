@@ -71,6 +71,131 @@ A professional and responsive multi-step form built using **Next.js (App Router)
 
 ```
 
+## **📂 `src/` Folder Structure Guide**
+
+This explains how to structure and place files inside the `src` folder. In short:
+
+### **📂 src/** (Root Folder)
+
+Files in this folder are organized in a **domain-based** manner. A **domain** refers to separate data entities like **product**, **user**, **checkout**, etc.
+
+---
+
+### **⏩ Folder Structure Based on Domain**
+
+Each domain will have its own folder where all relevant files for that domain are placed.
+
+- `src/components/{domain}` → **UI components** (e.g., `UserProfile.tsx`)
+- `src/constants/{domain}` → **Constants specific to the domain**
+- `src/models/{domain}` → **Data models and TypeScript interfaces**
+- `src/hooks/{domain}` → **Custom hooks**
+- `src/infrastructure/{domain}` → **API calls and query-related functions**
+
+---
+
+### **📂 components/** (UI Component Folder)
+
+- Each domain's UI components will reside in its **own folder**.
+- A separate folder named `layout` will contain global UI components like **Header** and **Footer**.
+
+```bash
+
+components
+├── product
+│   ├── ProductCard.tsx
+│   ├── ProductList.tsx
+├── user
+│   ├── UserProfile.tsx
+└── layout
+    ├── Header.tsx
+    ├── Footer.tsx
+    ├── Subscribe.tsx
+
+```
+
+---
+
+### **📂 infrastructure/** (Folder for API Calls and Data Fetching)
+
+This folder includes domain-based API calls, React Query setup, and type definitions.
+
+```bash
+
+infrastructure/
+├── product/
+│   ├── productAPIClient.ts // API functions
+│   ├── utils/
+│   │   ├── queries.ts      // React Query objects
+│   │   ├── keys.ts         // Query keys
+│   │   ├── types.ts        // Request/Response types
+│   └── index.ts
+├── cart/
+│   ├── cartApiBoundary.ts
+│   ├── utils/
+│   │   ├── queries.ts
+│   │   ├── keys.ts
+│   │   ├── types.ts
+│   └── index.ts
+
+```
+
+---
+
+### **📂 containers/** (Similar to the `app` directory in Next.js)
+
+- Each page will have its own folder containing **related components, hooks, models, and constants**.
+
+```bash
+
+containers
+└── about-us
+    ├── components
+    │   └── sections
+    │       ├── TrendingProductsSection.tsx
+    │       ├── OurVisionSection.tsx
+    └── constants
+        ├── brands.ts
+        ├── categories.ts
+
+```
+
+---
+
+### **📂 common/** (Shared Components & Utilities)
+
+This folder holds **components and utility files reused across multiple domains**.
+
+---
+
+### **📂 providers/** (Global State Management)
+
+- This is where app-wide contexts like **authentication** or **global state** will be managed.
+
+---
+
+### **📂 utils/** (Utility Functions & Components)
+
+- General-purpose functions and hooks go here.
+- **JSX-based utilities** are placed inside `utils/react`.
+
+```bash
+
+utils
+├── function
+├── hook
+├── logger
+└── react
+    ├── Condition.tsx
+    ├── Convert.tsx
+
+```
+
+---
+
+### **📂 styles/** (Design System)
+
+- For storing CSS variables, themes, and global styles.
+
 ---
 
 ## 📦 Getting Started
