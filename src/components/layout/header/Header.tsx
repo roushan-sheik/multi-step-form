@@ -26,10 +26,10 @@ const Header = () => {
           </li>
         </ul>
         <div className="flex items-center justify-between gap-5">
-          <button className="rounded-full bg-indigo-700  cursor-pointer px-6 py-2 text-white transition-all duration-300 hover:scale-90">
+          <button className="rounded-full bg-sky-500  cursor-pointer px-6 py-2 text-white transition-all duration-300 hover:scale-90">
             Log In
           </button>
-          <button className="rounded-full bg-indigo-700 cursor-pointer px-6 py-2 text-white transition-all duration-300 hover:scale-90">
+          <button className="rounded-full bg-sky-500 cursor-pointer px-6 py-2 text-white transition-all duration-300 hover:scale-90">
             Register
           </button>
         </div>

@@ -10,10 +10,10 @@ const ButtonNext = ({
   return (
     <button
       type={type}
-      className="group relative flex w-36 items-center cursor-pointer rounded-lg border-2 border-sky-400 p-4 text-sky-300;"
+      className="group relative flex w-36 items-center cursor-pointer rounded-lg border-2 border-sky-500 p-4 text-sky-300;"
     >
       <span className="font-semibold text-xl">{children}</span>
-      <span className="absolute right-3 box-content flex w-1/6 justify-center rounded-md bg-sky-400 duration-300 group-hover:w-5/6">
+      <span className="absolute right-3 box-content flex w-1/6 justify-center rounded-md bg-sky-500 duration-300 group-hover:w-5/6">
         <svg
           viewBox="0 0 24 24"
           fill="none"
