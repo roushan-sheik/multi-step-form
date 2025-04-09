@@ -1,4 +1,4 @@
-import MultiStepForm from "@/container/form/sections/MultiStepForm";
+import MultiStepForm from "@/container/register/sections/MultiStepForm";
 import React from "react";
 
 const page = () => {

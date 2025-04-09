@@ -28,6 +28,49 @@ A professional and responsive multi-step form built using **Next.js (App Router)
 
 ## 📂 Folder Structure
 
+```
+   ├─ src
+   │  ├─ app
+   │  │  ├─ (AppLayout)
+   │  │  │  ├─ layout.tsx
+   │  │  │  └─ page.tsx
+   │  │  ├─ favicon.ico
+   │  │  ├─ globals.css
+   │  │  └─ layout.tsx
+   │  ├─ components
+   │  │  └─ layout
+   │  │     ├─ footer
+   │  │     │  └─ Footer.tsx
+   │  │     └─ header
+   │  │        └─ Header.tsx
+   │  ├─ container
+   │  │  └─ register
+   │  │     ├─ SectionContainer.tsx
+   │  │     ├─ components
+   │  │     │  ├─ StepOne.tsx
+   │  │     │  ├─ StepSummary.tsx
+   │  │     │  ├─ StepThree.tsx
+   │  │     │  ├─ StepTwo.tsx
+   │  │     │  └─ ui
+   │  │     │     ├─ ButtonNext.tsx
+   │  │     │     └─ FormProgress.tsx
+   │  │     ├─ schema
+   │  │     │  └─ formSchema.ts
+   │  │     ├─ sections
+   │  │     │  └─ MultiStepForm.tsx
+   │  │     └─ types
+   │  │        └─ formTypes.ts
+   │  ├─ infrastucture
+   │  ├─ lib
+   │  │  ├─ cn.ts
+   │  │  └─ utils.ts
+   │  └─ types
+   │     └─ form.ts
+   └─ tsconfig.json
+
+
+```
+
 ---
 
 ## 📦 Getting Started

@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addressDetailsSchema } from "../schema/formSchema";
 import { TAddressDetails } from "../types/formTypes";
-import ButtonNext from "@/container/ui/ButtonNext";
-import FormProgress from "@/container/ui/FormProgress";
+import ButtonNext from "@/container/register/components/ui/ButtonNext";
+import FormProgress from "@/container/register/components/ui/FormProgress";
 
 type Props = {
   next: () => void;

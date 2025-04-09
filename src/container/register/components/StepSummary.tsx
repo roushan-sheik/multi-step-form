@@ -1,7 +1,7 @@
 "use client";
 import { ToastContainer, toast } from "react-toastify";
 import { TFormData } from "../types/formTypes";
-import FormProgress from "@/container/ui/FormProgress";
+import FormProgress from "@/container/register/components/ui/FormProgress";
 
 type Props = {
   prev: () => void;
