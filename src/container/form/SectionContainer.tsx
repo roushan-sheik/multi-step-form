@@ -1,17 +1,25 @@
-type SectionContainerProps = {
-  children: React.ReactNode;
+import { cn } from "@/lib/cn";
+import { ReactNode, FC } from "react";
+
+type TSectionContainerProps = {
+  children: ReactNode;
   containerClassName?: string;
   containerInnerClassName?: string;
 };
 
-const SectionContainer = ({
+const SectionContainer: FC<TSectionContainerProps> = ({
   children,
-  containerClassName,
-  containerInnerClassName,
-}: SectionContainerProps) => {
+  containerClassName = "",
+  containerInnerClassName = "",
+}) => {
   return (
-    <div className={`${containerClassName}container`}>
-      <div className={`${containerInnerClassName}max-w-[1440px] mx-auto`}>
+    <div className={cn("w-full", containerClassName)}>
+      <div
+        className={cn(
+          "max-w-[1240px] mx-auto overflow-hidden",
+          containerInnerClassName
+        )}
+      >
         {children}
       </div>
     </div>
