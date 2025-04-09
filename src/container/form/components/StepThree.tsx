@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { accountSetupSchema } from "../schema/formSchema";
 import { TAccountSetup } from "../types/formTypes";
 import ButtonNext from "@/container/ui/ButtonNext";
+import FormProgress from "@/container/ui/FormProgress";
 
 type Props = {
   next: () => void;
@@ -29,42 +30,49 @@ const StepThree = ({ next, prev, update, defaultValues }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      <div>
-        <label className="block font-medium">Username</label>
-        <input {...register("username")} className="input" />
-        {errors.username && (
-          <p className="text-red-500">{errors.username.message}</p>
-        )}
-      </div>
+    <div>
+      <h2 className="text-4xl text-center my-8 font-medium">
+        Register Your Account
+      </h2>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <div>
+          <label className="block font-medium">Username</label>
+          <input {...register("username")} className="input" />
+          {errors.username && (
+            <p className="text-red-500">{errors.username.message}</p>
+          )}
+        </div>
 
-      <div>
-        <label className="block font-medium">Password</label>
-        <input type="password" {...register("password")} className="input" />
-        {errors.password && (
-          <p className="text-red-500">{errors.password.message}</p>
-        )}
-      </div>
+        <div>
+          <label className="block font-medium">Password</label>
+          <input type="password" {...register("password")} className="input" />
+          {errors.password && (
+            <p className="text-red-500">{errors.password.message}</p>
+          )}
+        </div>
 
-      <div>
-        <label className="block font-medium">Confirm Password</label>
-        <input
-          type="password"
-          {...register("confirmPassword")}
-          className="input"
-        />
-        {errors.confirmPassword && (
-          <p className="text-red-500">{errors.confirmPassword.message}</p>
-        )}
-      </div>
+        <div>
+          <label className="block font-medium">Confirm Password</label>
+          <input
+            type="password"
+            {...register("confirmPassword")}
+            className="input"
+          />
+          {errors.confirmPassword && (
+            <p className="text-red-500">{errors.confirmPassword.message}</p>
+          )}
+        </div>
 
-      <div className="flex justify-between">
-        <button type="button" onClick={prev} className="btn-secondary">
-          Previous
-        </button>
-        <ButtonNext type="submit">Next</ButtonNext>
-      </div>
-    </form>
+        <div className="flex justify-between">
+          <button type="button" onClick={prev} className="btn-secondary">
+            Previous
+          </button>
+          <ButtonNext type="submit">Next</ButtonNext>
+        </div>
+      </form>
+      {/* progress bar  */}
+      <FormProgress progress="75%" />
+    </div>
   );
 };
 

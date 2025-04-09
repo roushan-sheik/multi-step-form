@@ -1,6 +1,7 @@
 "use client";
 import { ToastContainer, toast } from "react-toastify";
 import { TFormData } from "../types/formTypes";
+import FormProgress from "@/container/ui/FormProgress";
 
 type Props = {
   prev: () => void;
@@ -16,7 +17,8 @@ const StepSummary = ({ prev, data }: Props) => {
 
   return (
     <div className="space-y-4">
-      <h2 className="text-xl font-bold">Review Your Information</h2>
+      <h2 className="text-4xl text-center my-8 font-medium">Submit Now</h2>
+      <h2 className="text-2xl font-bold ">Review Your Information</h2>
 
       <ToastContainer />
       <div className="grid gap-2">
@@ -51,6 +53,8 @@ const StepSummary = ({ prev, data }: Props) => {
           Submit
         </button>
       </div>
+      {/* progress bar  */}
+      <FormProgress progress="100%" />
     </div>
   );
 };
