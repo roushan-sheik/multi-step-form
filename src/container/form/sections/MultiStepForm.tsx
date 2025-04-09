@@ -21,8 +21,8 @@ const MultiStepForm = () => {
 
   return (
     <SectionContainer>
-      <div className="w-full bg-blue-300 min-h-[75vh]">
-        <div className="max-w-xl mx-auto px-4 py-8">
+      <div className="w-full bg-gray-300 min-h-[75vh]">
+        <div className="lg:max-w-xl w-full mx-auto px-4 py-8">
           {step === 1 && (
             <StepOne
               next={nextStep}

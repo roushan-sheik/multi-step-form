@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 .input {
-  @apply w-full p-2 border rounded-md dark:bg-gray-800 dark:text-white;
+  @apply w-full p-2 border rounded-md dark:bg-gray-200 dark:text-black;
 }
 
 .btn-primary {
-  @apply px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition;
+  @apply rounded-lg bg-indigo-700 px-8 py-3 text-xl text-white duration-300 cursor-pointer active:scale-95;
 }
 
 .btn-secondary {
-  @apply px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 transition;
+  @apply bg-gray-400 text-white rounded hover:bg-gray-500 transition   px-8 py-3 text-xl   duration-300 cursor-pointer active:scale-95;
 }
